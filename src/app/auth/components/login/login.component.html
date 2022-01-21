@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 col-xs-12">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-floating mb-3">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="name@example.com"
+            formControlName="email"
+          />
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            formControlName="password"
+          />
+          <label for="floatingPassword">Password</label>
+        </div>
+        <button type="submit" class="btn btn-outline-primary btn-sm mt-3">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
