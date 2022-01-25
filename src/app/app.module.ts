@@ -8,6 +8,9 @@ import { StoreModule } from '@ngrx/store';
 import { routerReducer } from '@ngrx/router-store';
 import { AppRoutingModule } from './app-routing.module';
 import { EffectsModule } from '@ngrx/effects';
+import { TopBarModule } from './shared/modules/topBar/topBar.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +23,9 @@ import { EffectsModule } from '@ngrx/effects';
       router: routerReducer,
     }),
     EffectsModule.forRoot([]),
+    TopBarModule,
+    BrowserAnimationsModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

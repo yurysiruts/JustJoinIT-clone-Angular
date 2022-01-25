@@ -1,0 +1,233 @@
+$dark-text: rgb(55, 71, 79);
+$grey-color: #99a1ab;
+$border-color: #e4e8f0;
+$light-mod-hover: rgba(56, 79, 90, 0.04);
+$dark-mod-hover: rgba(255, 255, 255, 0.04);
+$active-pink-link: #ff4081;
+$hover--light-pink: #f48fb1;
+
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: auto;
+  right: 0;
+
+  &--light {
+    background-color: #fff;
+  }
+}
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 68px;
+  max-height: 68px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background: #ffffff;
+  border-bottom: 1px solid $border-color;
+}
+
+.logo {
+  .logo__link {
+    color: $dark-text;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+  flex: 1 1 0%;
+}
+
+.content__theme {
+  display: flex;
+  position: relative;
+  margin-left: 16px;
+
+  &_background {
+    width: 50px;
+    height: 26px;
+    border-radius: 20px;
+
+    &.light {
+      background-color: #e4e8f0;
+    }
+  }
+
+  .content__theme_switch {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 1px;
+
+    &.light {
+      background-color: white;
+    }
+
+    .material-icons {
+      font-size: 21px;
+
+      &.light {
+        color: #707172;
+      }
+    }
+  }
+}
+
+.content__description {
+  margin-left: 16px;
+  p {
+    color: $grey-color;
+    margin: 0;
+  }
+}
+
+.content__links {
+  display: flex;
+  flex: 1 1 0%;
+  justify-content: flex-end;
+
+  .content__link {
+    margin: 0 6px;
+    padding: 0;
+    text-decoration: none;
+    min-width: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    font-weight: 600;
+    color: $grey-color;
+    cursor: pointer;
+
+    &.active {
+      color: $active-pink-link;
+    }
+
+    &:hover {
+      color: $hover--light-pink;
+    }
+  }
+}
+
+.content__profile {
+  height: 100%;
+  max-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 16px;
+  margin: 0 6px;
+  margin-right: 16px;
+  border: 1px solid $border-color;
+  border-bottom: none;
+  border-top: none;
+  cursor: pointer;
+
+  &.light:hover {
+    background-color: $light-mod-hover;
+  }
+
+  &_box {
+    width: 100%;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+
+    .profile_image {
+      width: 40px;
+      height: 40px;
+      border: solid 3px;
+      border-radius: 50%;
+      box-shadow: 0 6px 13px 0 rgb(0, 0, 0, 8%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-right: 7px;
+
+      &.light {
+        border-color: #fff;
+      }
+
+      &.dark {
+        border-color: #3c3c3c;
+      }
+    }
+
+    .profile_chevron {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.content__jobPost {
+  height: 38px;
+  cursor: pointer;
+  color: #5f656b;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  padding: 6px 16px;
+  border-color: #e4e8f0;
+  margin: 0px 6px;
+  min-width: 64px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  line-height: 1.75;
+  white-space: nowrap;
+  border-radius: 25px;
+
+  &.light:hover {
+    background-color: $light-mod-hover;
+  }
+
+  .content__jobPost_label {
+    letter-spacing: 0.5px;
+  }
+}
+
+.bars {
+  margin-right: -12px;
+  margin-left: -5px;
+
+  .bars__button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    overflow: visible;
+    font-size: 1.5rem;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 50%;
+
+    &.light:hover {
+      background-color: #f3f6f8;
+    }
+
+    .material-icons {
+      color: $grey-color;
+    }
+  }
+}
