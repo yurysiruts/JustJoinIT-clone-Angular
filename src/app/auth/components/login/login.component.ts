@@ -11,6 +11,9 @@ import { loginAction } from '../../store/actions/login.action';
 export class LoginComponent implements OnInit {
   form!: FormGroup;
 
+  visible: boolean = false;
+  visibility: string = 'visibility';
+
   constructor(private store: Store) {}
 
   ngOnInit(): void {

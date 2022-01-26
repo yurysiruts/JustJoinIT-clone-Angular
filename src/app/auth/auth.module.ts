@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthService } from './services/auth.service';
 import { LoginEffect } from './store/effect/login.effect';
 import { AuthReducer } from './store/reducers';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const routes: Routes = [{ path: 'devs', component: LoginComponent }];
 
@@ -18,6 +19,7 @@ const routes: Routes = [{ path: 'devs', component: LoginComponent }];
     StoreModule.forFeature('auth', AuthReducer),
     EffectsModule.forFeature([LoginEffect]),
     ReactiveFormsModule,
+    FontAwesomeModule,
   ],
   declarations: [LoginComponent],
   exports: [RouterModule],
