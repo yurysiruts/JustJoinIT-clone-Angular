@@ -1,119 +1,93 @@
-<div class="auth__page">
-  <div class="auth__data">
-    <div class="auth__data_container">
-      <h1 class="auth__data_flag">Get started for free</h1>
-      <div class="auth__data_signInAs">
-        <div class="signInAs__pill">
-          <a class="signInAs__pill_link light">
-            <span class="signInAs__pill_label">
-              <img
-                class="svg"
-                src="../../../../assets/svg/google_icon-icons.com_62736.svg"
-              />
-              <span>Sign in with Google</span>
-            </span>
-          </a>
-        </div>
-        <div class="signInAs__pill">
-          <a class="signInAs__pill_link light">
-            <span class="signInAs__pill_label">
-              <img
-                class="svg"
-                src="../../../../assets/svg/github-logo_icon-icons.com_73546.svg"
-              />
-              <span>Sign in with Github</span>
-            </span>
-          </a>
-        </div>
-        <div class="signInAs__pill">
-          <a class="signInAs__pill_link light">
-            <span class="signInAs__pill_label">
-              <img
-                class="svg"
-                src="../../../../assets/svg/linkedin_icon-icons.com_53609.svg"
-              />
-              <span>Sign in with LinkedIn</span>
-            </span>
-          </a>
-        </div>
-        <div class="signInAs__pill">
-          <a class="signInAs__pill_link light">
-            <span class="signInAs__pill_label">
-              <img
-                class="svg"
-                src="../../../../assets/svg/facebook_icon-icons.com_53612.svg"
-              />
-              <span>Sign in with Facebook</span>
-            </span>
-          </a>
-        </div>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="auth__data_form">
+  <div class="form__label_container">
+    <div class="form__group">
+      <div class="form__group-label">
+        <label for="email">Email</label>
       </div>
-      <div class="or__line">
-        <span class="or__line_text">Or</span>
+      <div
+        class="form__group-input"
+        [ngClass]="{
+          border_error: !form.get('email')?.valid && form.get('email')?.touched
+        }"
+      >
+        <div class="form-legend">
+          <span class="legend-sign">@</span>
+        </div>
+        <input
+          type="text"
+          class="form-input email-input"
+          name="email"
+          placeholder="Email"
+          formControlName="email"
+        />
       </div>
-      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="auth__data_form">
-        <div class="form__label_container">
-          <div class="form__group">
-            <div class="form__group-label">
-              <label for="email">Email</label>
-            </div>
-            <div class="form__group-input">
-              <div class="form-legend">
-                <span class="legend-sign">@</span>
-              </div>
-              <input
-                type="text"
-                class="form-input email-input"
-                placeholder="Email"
-                formControlName="email"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="form__label_container">
-          <div class="form__group">
-            <div class="form__group-label">
-              <label for="password">Password</label>
-            </div>
-            <div class="form__group-input">
-              <div class="form-legend">
-                <span class="legend-sign">#</span>
-              </div>
-              <input
-                [type]="visible === false ? 'text' : 'password'"
-                class="form-input password-input"
-                placeholder="Password"
-                formControlName="password"
-              />
-              <div class="input-visibility">
-                <button
-                  type="button"
-                  class="visibility-btn"
-                  (click)="visible = !visible"
-                >
-                  <i class="material-icons">
-                    {{ visible === false ? "visibility" : "visibility_off" }}
-                  </i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form__submit">
-          <button type="submit" class="sumbmit__btn">
-            <span>Sign In</span>
-          </button>
-        </div>
-      </form>
-      <h6 class="auth__note">
-        <span class="auth__note_text">New account?</span>&nbsp;
-        <a class="auth__note_link">Register</a>
-      </h6>
-      <div class="separation"></div>
-      <h6 class="auth__note">
-        <a class="auth__note_link">Forget password?</a>
-      </h6>
+      <div
+        *ngIf="!form.get('email')?.valid && form.get('email')?.touched"
+        class="form__group-error"
+      >
+        <span class="message">Email is a required field</span>
+      </div>
     </div>
   </div>
-  <div class="auth__posts"></div>
-</div>
+  <div class="form__label_container">
+    <div class="form__group">
+      <div class="form__group-label">
+        <label for="password">Password</label>
+      </div>
+      <div
+        class="form__group-input"
+        [ngClass]="{
+          border_error:
+            !form.get('password')?.valid && form.get('password')?.touched
+        }"
+      >
+        <div class="form-legend">
+          <span class="legend-sign">
+            <i class="material-icons">lock</i>
+          </span>
+        </div>
+        <input
+          [type]="visible === false ? 'text' : 'password'"
+          class="form-input password-input"
+          placeholder="Password"
+          formControlName="password"
+        />
+        <div class="input-visibility">
+          <button
+            type="button"
+            class="visibility-btn"
+            (click)="visible = !visible"
+          >
+            <i class="material-icons">
+              {{ visible === false ? "visibility" : "visibility_off" }}
+            </i>
+          </button>
+        </div>
+      </div>
+      <div
+        *ngIf="!form.get('password')?.valid && form.get('password')?.touched"
+        class="form__group-error"
+      >
+        <span *ngIf="f['password']?.errors?.['required']" class="message"
+          >Password is a required field</span
+        >
+        <span *ngIf="f['password']?.errors?.['minlength']" class="message">
+          Password must be at least 6 characters
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="form__submit">
+    <button type="submit" class="sumbmit__btn">
+      <span>Sign In</span>
+    </button>
+  </div>
+  <h6 class="auth__note">
+    <span class="auth__note_text">New account?</span>&nbsp;
+    <a class="auth__note_link">Register</a>
+  </h6>
+  <div class="separation"></div>
+  <h6 class="auth__note">
+    <a class="auth__note_link">Forget password?</a>
+  </h6>
+</form>
