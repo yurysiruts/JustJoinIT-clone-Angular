@@ -39,10 +39,10 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    // if (this.form.invalid) {
-    //   return;
-    // }
+    if (this.form.invalid) {
+      return;
+    }
     console.log(this.form);
-    // this.store.dispatch(loginAction({ request: this.form.value }));
+    this.store.dispatch(loginAction({ request: this.form.value }));
   }
 }

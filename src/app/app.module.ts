@@ -11,11 +11,15 @@ import { EffectsModule } from '@ngrx/effects';
 import { TopBarModule } from './shared/modules/topBar/topBar.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [];
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     AuthModule,
     HttpClientModule,
@@ -26,6 +30,7 @@ import { MatIconModule } from '@angular/material/icon';
     TopBarModule,
     BrowserAnimationsModule,
     MatIconModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

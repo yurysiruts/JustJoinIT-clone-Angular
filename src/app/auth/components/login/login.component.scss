@@ -50,13 +50,13 @@ $dark-pink: rgb(178, 44, 90);
       height: 48px;
       border: 1px solid #e4e8f0;
       background-color: transparent;
-      transition: background-color 0.2s;
-      &:hover {
-        background-color: #f3f6f8;
-      }
-
+      transition: all 0.2s;
       &.border_error {
         border: 2px solid tomato;
+      }
+      &:hover {
+        background-color: #f3f6f8;
+        border: 1px solid #e4e8f0;
       }
 
       .form-legend {

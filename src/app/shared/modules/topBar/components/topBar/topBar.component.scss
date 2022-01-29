@@ -12,6 +12,7 @@ $hover--light-pink: #f48fb1;
   top: 0;
   left: auto;
   right: 0;
+  z-index: 1000;
 
   &--light {
     background-color: #fff;
