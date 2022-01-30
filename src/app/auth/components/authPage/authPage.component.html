@@ -1,6 +1,6 @@
 <div class="auth__page">
   <div class="auth__data">
-    <div class="auth__data_container">
+    <div class="auth__data_container" *ngIf="!registered">
       <h1 class="auth__data_flag">Get started for free</h1>
       <div class="auth__data_signInAs">
         <div class="signInAs__pill">
@@ -51,7 +51,25 @@
       <div class="or__line">
         <span class="or__line_text">Or</span>
       </div>
-      <app-login></app-login>
+      <app-login *ngIf="route == '/devs'"></app-login>
+      <app-signup
+        *ngIf="route == '/devs/signup'"
+        (registeredEvent)="onRegistered($event)"
+      ></app-signup>
+    </div>
+    <div class="auth__data_container" *ngIf="registered">
+      <div class="registered-successfully">
+        <div class="registered_img">
+          <img
+            src="./../../../../assets/authPictures/email-284_84341.png"
+            alt="email_sended"
+          />
+        </div>
+        <h1 class="registered_text">Thank you for the registration</h1>
+        <h6 class="registered_notation">
+          You will receive the email with confirmation link shortly.
+        </h6>
+      </div>
     </div>
   </div>
   <div class="auth__posts" style="display: block">

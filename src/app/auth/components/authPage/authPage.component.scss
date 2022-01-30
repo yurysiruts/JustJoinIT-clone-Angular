@@ -125,3 +125,31 @@ a {
   min-width: 0;
   min-height: 0;
 }
+
+.registered-successfully {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .registered_text {
+    text-align: left;
+    padding-top: 41px;
+    color: #2e384d;
+    font-size: 34px;
+    font-family: Open Sans, sans-serif;
+    font-weight: 300;
+    line-height: 1.167;
+    margin-bottom: 20px;
+  }
+
+  .registered_notation {
+    text-align: left;
+    max-width: 330px;
+    color: #8798ad;
+    font-size: 1rem;
+    font-family: Open Sans, sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    margin-bottom: 20px;
+  }
+}

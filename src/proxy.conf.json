@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://justjoin.it/api/developers/auth",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

@@ -80,7 +80,11 @@
               "browserTarget": "JustJoinIT-clone-angular:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "browserTarget": "JustJoinIT-clone-angular:build",
+            "proxyConfig": "./src/proxy.conf.json"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

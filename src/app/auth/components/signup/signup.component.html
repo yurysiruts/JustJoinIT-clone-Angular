@@ -1,1 +1,59 @@
-<h2>Signup component works!</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="auth__data_form">
+  <div class="form__label_container">
+    <div class="form__group">
+      <div class="form__group-label">
+        <label for="email">Email</label>
+      </div>
+      <div
+        class="form__group-input"
+        [ngClass]="{
+          border_error: !form.get('email')?.valid && form.get('email')?.touched
+        }"
+      >
+        <div class="form-legend">
+          <span class="legend-sign">@</span>
+        </div>
+        <input
+          type="text"
+          class="form-input email-input"
+          name="email"
+          placeholder="Email"
+          formControlName="email"
+        />
+      </div>
+      <div
+        *ngIf="!form.get('email')?.valid && form.get('email')?.touched"
+        class="form__group-error"
+      >
+        <span class="message">Email is a required field</span>
+      </div>
+    </div>
+  </div>
+  <div class="form__label_container">
+    <div class="form__group">
+      <div class="form__group_centered">
+        <input
+          type="checkbox"
+          id="checkboxy"
+          name="checkboxy"
+          class="form-checkbox"
+        />
+        <label for="checkboxy" class="form-checkbox-text">
+          I accept&nbsp;
+          <a class="auth__note_link" [routerLink]="['/devs']">terms</a> &nbsp;
+          of service
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form__submit">
+    <button type="submit" class="sumbmit__btn">
+      <span>Register</span>
+    </button>
+  </div>
+  <h6 class="auth__note">
+    <span class="auth__note_text">Already have an account?</span>&nbsp;
+    <a class="auth__note_link" [routerLink]="['/devs']">sign in</a>
+  </h6>
+  <div class="separation"></div>
+</form>

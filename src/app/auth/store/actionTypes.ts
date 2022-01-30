@@ -1,7 +1,7 @@
 export enum ActionTypesAuth {
-  // REGISTER = '[Auth] Register',
-  // REGISTER_SUCCESS = '[Auth] Register success',
-  // REGISTER_FAILURE = '[Auth] Register failure',
+  SIGNUP = '[Auth] SignUp',
+  SIGNUP_SUCCESS = '[Auth] SignUp success',
+  SIGNUP_FAILURE = '[Auth] SignUp failure',
 
   LOGIN = '[Auth] Login',
   LOGIN_SUCCESS = '[Auth] Login success',
