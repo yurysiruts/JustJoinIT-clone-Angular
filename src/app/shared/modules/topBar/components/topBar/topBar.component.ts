@@ -18,7 +18,7 @@ export class TopBarComponent implements OnInit {
   // isAnonymous$: Observable<boolean>;
   // currentUser$: Observable<CurrentUserInterface | null>;
 
-  // constructor(private store: Store) {}
+  constructor(private store: Store) {}
 
   ngOnInit(): void {
     //   this.isLoggedIn$ = this.store.pipe(select(isLoggedInSelector));

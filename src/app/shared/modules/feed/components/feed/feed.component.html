@@ -1,0 +1,92 @@
+<div class="feed_container" *ngFor="let offer of offers">
+  <div class="feed__logo">
+    <img class="feed__logo-img" [src]="offer.logo" />
+  </div>
+  <div class="feed__main">
+    <div class="feed__main-title">
+      <div class="feed-offer">
+        <h3 class="offer-name">{{ offer.position_name }}</h3>
+      </div>
+      <div class="feed-offer">
+        <img
+          class="offer-priority"
+          src="./../../../../../../assets/mainPage/fire_115156.svg"
+        />
+      </div>
+      <div class="feed-offer feed-offer-pill">
+        <span class="offer-status">{{ offer.status }}</span>
+      </div>
+    </div>
+    <div class="feed__main-description">
+      <div class="experience">
+        <span>{{ offer.experience }}</span>
+      </div>
+      <div class="about">
+        <p>
+          {{ offer.about }}
+        </p>
+      </div>
+    </div>
+    <div class="feed__main-stack">
+      <div class="stack-pill">
+        <span class="content">JavaScript</span>
+      </div>
+      <div class="stack-pill">
+        <span class="content">Node.js</span>
+      </div>
+      <div class="stack-pill">
+        <span class="content">MongoDB</span>
+      </div>
+      <div class="stack-pill">
+        <span class="content">MySQL</span>
+      </div>
+      <div class="stack-pill">
+        <span class="content">ExpressJS</span>
+      </div>
+    </div>
+  </div>
+  <div class="feed__info">
+    <div class="feed__info-salary">
+      <span class="salary-currency">PLN</span>
+      <span class="salary-amount">15000 - 20000</span> /
+      <span class="salary-per">Month</span>
+    </div>
+    <div class="feed__info-company">
+      <div class="company_item">
+        <img
+          class="item-image"
+          src="./../../../../../../assets/mainPage/iconmonstr-building-20.svg"
+        />
+        <span class="info-text">{{ offer.compony_name }}</span>
+      </div>
+      <div class="company_item">
+        <img
+          class="item-image"
+          src="./../../../../../../assets/mainPage/iconmonstr-location-1.svg"
+        />
+        <span class="info-text">{{ offer.compony_location }}</span>
+      </div>
+      <div class="company_item">
+        <img
+          class="item-image"
+          src="./../../../../../../assets/mainPage/iconmonstr-document-thin.svg"
+        />
+        <span class="info-text">{{ offer.employment_type }}</span>
+      </div>
+      <div class="company_item">
+        <img
+          class="item-image"
+          src="./../../../../../../assets/mainPage/iconmonstr-briefcase-5.svg"
+        />
+        <span class="info-text">{{ offer.time }}</span>
+      </div>
+      <div class="company_item">
+        <img
+          class="item-image"
+          src="./../../../../../../assets/mainPage/ok_check_icon_157099.svg"
+        />
+        <span class="info-text">{{ offer.remote }}</span>
+      </div>
+    </div>
+  </div>
+</div>

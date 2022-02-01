@@ -12,6 +12,7 @@ import { TopBarModule } from './shared/modules/topBar/topBar.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule, Routes } from '@angular/router';
+import { GlobalFeedModule } from './globalFeed/globalFeed.module';
 
 const routes: Routes = [];
 
@@ -31,6 +32,7 @@ const routes: Routes = [];
     BrowserAnimationsModule,
     MatIconModule,
     RouterModule,
+    GlobalFeedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
