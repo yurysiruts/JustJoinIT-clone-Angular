@@ -1,11 +1,14 @@
+@import '../src/assets/styles/theme';
+
 html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
-  color: rgb(55, 71, 79);
-  background: #fff;
+  color: var(--color);
+  background: var(--background);
   font-size: 0.875rem;
   font-weight: 400;
 }
