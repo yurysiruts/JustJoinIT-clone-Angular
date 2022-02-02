@@ -1,15 +1,118 @@
-<!-- <div class="main__page"> -->
-<!-- Latest vacancies -->
-<div class="vacancies__page">
-  <div class="vacancies__page_banner">
-    <h1>Latest Vacancies</h1>
+<div class="main__page">
+  <!-- Latest vacancies -->
+  <div class="vacancies__page">
+    <div class="vacancies__page_banner">
+      <h1>Latest Vacancies</h1>
+    </div>
+    <div class="vacancies__page_container">
+      <app-feed></app-feed>
+    </div>
   </div>
-  <div class="vacancies__page_container">
-    <app-feed></app-feed>
+  <!-- How it works -->
+  <div class="step__page">
+    <div class="step__page-container">
+      <div class="step__page-title">
+        <h2>How it works?</h2>
+      </div>
+      <div class="step__page-selection">
+        <mat-button-toggle-group name="double_selection" aria-label="Selection">
+          <mat-button-toggle value="companies">Companies</mat-button-toggle>
+          <mat-button-toggle value="experience">Experience</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+      <div class="step__page-steps">
+        <div class="step">
+          <div class="step-count">
+            <div class="count-num">
+              <span class="num">1</span>
+            </div>
+          </div>
+          <div class="step-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+              voluptatem ratione reiciendis voluptate tibus quis illo.
+            </p>
+          </div>
+          <div class="step-image">
+            <img
+              class="step-image-img"
+              src="../../../../assets/placeholder/clouds.jpg"
+            />
+          </div>
+        </div>
+        <img
+          class="arrow-next"
+          src="../../../../assets/mainPage/rightarrow_114216.svg"
+        />
+        <div class="step">
+          <div class="step-count">
+            <div class="count-num">
+              <span class="num">2</span>
+            </div>
+          </div>
+          <div class="step-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+              deleniti.
+            </p>
+          </div>
+          <div class="step-image">
+            <img
+              class="step-image-img"
+              src="../../../../assets/placeholder/yellow-grey.jpg"
+            />
+          </div>
+        </div>
+        <img
+          class="arrow-next"
+          src="../../../../assets/mainPage/rightarrow_114216.svg"
+        />
+        <div class="step">
+          <div class="step-count">
+            <div class="count-num">
+              <span class="num">3</span>
+            </div>
+          </div>
+          <div class="step-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+              voluptatem ratione reiciendis voluptate tibus quis illo.
+            </p>
+          </div>
+          <div class="step-image">
+            <img
+              class="step-image-img"
+              src="../../../../assets/placeholder/clouds.jpg"
+            />
+          </div>
+        </div>
+        <img
+          class="arrow-next"
+          src="../../../../assets/mainPage/rightarrow_114216.svg"
+        />
+        <div class="step">
+          <div class="step-count">
+            <div class="count-num">
+              <span class="num">4</span>
+            </div>
+          </div>
+          <div class="step-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptate, corporis!
+            </p>
+          </div>
+          <div class="step-image">
+            <img
+              class="step-image-img"
+              src="../../../../assets/placeholder/yellow-grey.jpg"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="step__page-confirm">
+        <button mat-stroked-button color="primary">Confirm</button>
+      </div>
+    </div>
   </div>
 </div>
-<!-- How it works -->
-<div class="step__page">
-  <h2>how it works</h2>
-</div>
-<!-- </div> -->

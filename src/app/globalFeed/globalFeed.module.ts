@@ -3,11 +3,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FeedModule } from '../shared/modules/feed/feed.module';
 import { GlobalFeedComponent } from './components/globalFeed/globalFeed.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatButtonModule } from '@angular/material/button';
 
 const routes: Routes = [{ path: '', component: GlobalFeedComponent }];
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(routes), FeedModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    FeedModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+  ],
   declarations: [GlobalFeedComponent],
 })
 export class GlobalFeedModule {}
