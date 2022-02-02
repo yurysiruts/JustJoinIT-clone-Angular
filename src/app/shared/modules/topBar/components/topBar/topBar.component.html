@@ -1,4 +1,8 @@
-<header class="header header--light" *ngIf="currentTheme$ | async as theme"app-theme>
+<header
+  class="header header--{{ theme }}"
+  *ngIf="currentTheme$ | async as theme"
+  app-theme
+>
   <div class="header__container">
     <div class="logo">
       <a class="logo__link">polandDo.it</a>
@@ -8,13 +12,17 @@
         <p>#1 Job Board for IT industry in Poland</p>
       </div>
       <div class="content__theme">
-        <span class="content__theme_background {{theme}}">
-          <span class="content__theme_switch {{theme}}">
+        <span class="content__theme_background {{ theme }}">
+          <span class="content__theme_switch {{ theme }}">
             <ng-container *ngIf="theme === 'light'; else elseTemplate">
-              <i class="material-icons light" (click)="toggleTheme(theme)">light_mode</i>
+              <i class="material-icons light" (click)="toggleTheme(theme)"
+                >light_mode</i
+              >
             </ng-container>
             <ng-template #elseTemplate>
-              <i class="material-icons" (click)="toggleTheme(theme)">nights_stay</i>
+              <i class="material-icons" (click)="toggleTheme(theme)"
+                >nights_stay</i
+              >
             </ng-template>
           </span>
         </span>

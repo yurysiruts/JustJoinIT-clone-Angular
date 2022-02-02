@@ -10,6 +10,6 @@ export class AppComponent {
   title = 'JustJoinIT-clone-angular';
 
   constructor(private themeService: ThemeService) {
-    this.themeService.init()
+    this.themeService.init();
   }
 }

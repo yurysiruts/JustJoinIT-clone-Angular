@@ -1,8 +1,11 @@
-$dark-text: rgb(55, 71, 79);
-$grey-color: #99a1ab;
-$border-color: #e4e8f0;
-$light-mod-hover: rgba(56, 79, 90, 0.04);
-$dark-mod-hover: rgba(255, 255, 255, 0.04);
+@import "./../../../../../../assets/styles/theme";
+
+// $dark-text: rgb(55, 71, 79);
+// $grey-color: #99a1ab;
+// $gery: rgba(165, 97, 97, 0.8);
+// $border-color: #e4e8f0;
+// $light-mod-hover: rgba(56, 79, 90, 0.04);
+// $dark-mod-hover: rgba(255, 255, 255, 0.04);
 $active-pink-link: #ff4081;
 $hover--light-pink: #f48fb1;
 
@@ -28,13 +31,13 @@ $hover--light-pink: #f48fb1;
   max-height: 68px;
   padding-left: 24px;
   padding-right: 24px;
-  background: #ffffff;
-  border-bottom: 1px solid $border-color;
+  background: var(--eazy-background);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
   .logo__link {
-    color: $dark-text;
+    color: var(--color);
     text-decoration: none;
     font-size: 25px;
     font-weight: 700;
@@ -90,7 +93,7 @@ $hover--light-pink: #f48fb1;
 .content__description {
   margin-left: 16px;
   p {
-    color: $grey-color;
+    color: var(--lighter-color);
     margin: 0;
   }
 }
@@ -110,7 +113,7 @@ $hover--light-pink: #f48fb1;
     align-items: center;
     background: none;
     font-weight: 600;
-    color: $grey-color;
+    color: var(--lighter-color);
     cursor: pointer;
 
     &.active {
@@ -132,13 +135,13 @@ $hover--light-pink: #f48fb1;
   padding: 6px 16px;
   margin: 0 6px;
   margin-right: 16px;
-  border: 1px solid $border-color;
+  border: 1px solid var(--border-color);
   border-bottom: none;
   border-top: none;
   cursor: pointer;
 
   &.light:hover {
-    background-color: $light-mod-hover;
+    background-color: var(--mod-hover);
   }
 
   &_box {
@@ -179,10 +182,9 @@ $hover--light-pink: #f48fb1;
 .content__jobPost {
   height: 38px;
   cursor: pointer;
-  color: #5f656b;
-  border: 1px solid rgba(0, 0, 0, 0.23);
+  color: var(--color);
+  border: 1px solid var(--border-color);
   padding: 6px 16px;
-  border-color: #e4e8f0;
   margin: 0px 6px;
   min-width: 64px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
@@ -191,9 +193,10 @@ $hover--light-pink: #f48fb1;
   line-height: 1.75;
   white-space: nowrap;
   border-radius: 25px;
+  background-color: var(--background);
 
   &.light:hover {
-    background-color: $light-mod-hover;
+    background-color: var(--mod-hover);
   }
 
   .content__jobPost_label {
@@ -225,11 +228,11 @@ $hover--light-pink: #f48fb1;
     border-radius: 50%;
 
     &.light:hover {
-      background-color: #f3f6f8;
+      background-color: var(--mod-hover);
     }
 
     .material-icons {
-      color: $grey-color;
+      color: var(--lighter-color);
     }
   }
 }
