@@ -1,0 +1,68 @@
+@import "../../../../assets/styles/theme";
+
+h1,
+h2,
+h3,
+h3.page_title {
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+button {
+  border: none;
+}
+
+// -------------------- customers__section
+
+.customers__section {
+  display: flex;
+  justify-content: center;
+
+  &-container {
+    width: 100%;
+    padding: 0 3%;
+  }
+
+  &-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+      width: 75%;
+    }
+  }
+
+  &-UNKNOWN {
+    height: 320px;
+  }
+
+  &-joinBtn {
+    display: flex;
+    justify-content: center;
+
+    button {
+      width: 165px;
+      height: 45px;
+      font-size: 18px;
+      font-weight: 600;
+      background-color: var(--eazy-background);
+      color: #ff4081;
+      box-shadow: 0 2px 10px var(--shadow-color);
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+}

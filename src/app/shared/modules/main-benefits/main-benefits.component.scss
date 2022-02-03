@@ -1,0 +1,124 @@
+@import "../../../../assets/styles/theme";
+
+h1,
+h2,
+h3,
+h3.page_title {
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+button {
+  border: none;
+}
+
+// ----------------------------- benefits__section
+
+.benefits__section {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-bottom: 30px;
+
+  background-image: url("./../../../../assets/mainPage/BLUE1-10.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -221px;
+  height: 1150px;
+
+  &-container {
+    width: 100%;
+    padding: 0 22%;
+    margin-top: 8%;
+  }
+
+  &-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+
+  &-description {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  &-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 50px;
+
+    .mat-button-toggle-group {
+      border: 1px solid var(--border-color);
+    }
+    .mat-button-toggle {
+      width: 250px;
+    }
+    .mat-button-toggle-checked {
+      background-color: #d9d8d8;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+
+    .content_item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 2rem;
+        max-width: 44%;
+        flex: 0 50%;
+        .text_title {
+          h5 {
+            font-size: 1.5rem;
+            font-weight: 600;
+          }
+        }
+      }
+
+      &-image {
+        display: flex;
+        flex: 0 50%;
+        img.itemImg {
+          width: 275px;
+          height: 208px;
+          border-radius: 2%;
+        }
+      }
+    }
+
+    .content_item:nth-child(odd) {
+      flex-direction: row;
+    }
+    .content_item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  button {
+    width: 165px;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--eazy-background);
+    color: #ff4081;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+}

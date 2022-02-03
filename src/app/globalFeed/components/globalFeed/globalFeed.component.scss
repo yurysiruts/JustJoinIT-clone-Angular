@@ -2,6 +2,7 @@
 
 h1,
 h2,
+h3,
 h3.page_title {
   font-size: 50px;
   letter-spacing: 2px;
@@ -18,12 +19,12 @@ h3.page_title {
   background-image: url("./../../../../assets/mainPage/BLUE2-10.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -262px;
+  background-position-y: -210px;
   margin-bottom: 66px;
 
   &_banner {
     display: flex;
-    height: 190px;
+    height: 289px;
     justify-content: center;
     align-items: flex-end;
     margin-bottom: 25px;
@@ -32,141 +33,5 @@ h3.page_title {
   &_container {
     display: flex;
     justify-content: center;
-  }
-}
-
-// ---------------------------------
-
-.step__page {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 60px;
-  background-image: url("./../../../../assets/mainPage/BLUE3-10.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: 33%;
-  height: 730px;
-
-  &-container {
-    width: 920px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  &-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 18px;
-  }
-
-  &-selection {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 75px;
-
-    .mat-button-toggle-group {
-      border: 1px solid var(--border-color);
-    }
-    .mat-button-toggle {
-      width: 250px;
-    }
-    .mat-button-toggle-checked {
-      background-color: #d9d8d8;
-    }
-    // .mat-button-toggle#mat-button-toggle-1 {
-    //   border-right: 1px solid var(--border-color);
-    // }
-  }
-
-  &-steps {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 45px;
-
-    .step {
-      width: 180px;
-      height: 315px;
-      border: 1px solid grey;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-      background: transparent;
-      border-radius: 5px;
-      overflow: hidden;
-    }
-
-    .step-count {
-      height: 25%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .count-num {
-        border: 1px solid grey;
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .num {
-          font-family: "Supermercado One", cursive;
-          font-size: 25px;
-        }
-      }
-    }
-
-    .step-text {
-      padding: 0 8px;
-      height: 35%;
-      overflow: hidden;
-
-      p {
-        font-size: 13px;
-        font-weight: 300;
-        margin: 0;
-      }
-    }
-
-    .step-image {
-      height: 40%;
-    }
-
-    img.step-image-img {
-      object-fit: cover;
-      height: 100%;
-      width: 100%;
-    }
-
-    img.arrow-next {
-      width: 55px;
-      margin: 0 5px;
-    }
-  }
-
-  &-confirm {
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-
-    button {
-      width: 165px;
-      height: 45px;
-      font-size: 18px;
-      font-weight: 600;
-      background-color: var(--eazy-background);
-      color: #ff4081;
-      box-shadow: 0 2px 10px var(--shadow-color);
-      transition: all 0.2s ease-in-out;
-
-      &:hover {
-        transform: scale(1.03);
-      }
-    }
   }
 }
